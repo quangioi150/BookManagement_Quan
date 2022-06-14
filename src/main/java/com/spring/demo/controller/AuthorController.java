@@ -30,9 +30,11 @@ public class AuthorController {
         return ResponseEntity.ok().body(author);
     }
 
-    @DeleteMapping("/authors/{id}")
-    public void deleteAuthorById(@PathVariable("id") String id) {
-        authorService.deleteAuthorById(id);
+    @RequestMapping(value = "authors/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public String deleteBookById(@PathVariable String id) {
+       authorService.deleteAuthorById(id);
+        return "delete successfull";
     }
 
     @PutMapping("/authors/{id}")

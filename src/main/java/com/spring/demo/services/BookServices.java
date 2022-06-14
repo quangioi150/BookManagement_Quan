@@ -13,7 +13,7 @@ public interface BookServices {
 
     List<Book> findAllBook();
 
-    void deleteBookById(String id);
+    public void deleteBookById(String id);
 
     Book updateById(String id);
 

@@ -13,7 +13,7 @@ public interface AuthorServices {
 
     List<Author> findAllAuthor();
 
-    void deleteAuthorById(String id);
+    public void deleteAuthorById(String id);
 
     Optional<Author> findById(String id);
 
